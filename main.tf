@@ -29,3 +29,13 @@ resource "aws_instance" "project-prod-server" {
     Name = "project-prod-server"
   }
 }
+
+#Creating prod server for airbnb
+resource "aws_instance" "project-sandbox-server" {
+  ami           =var.ami_id
+  instance_type = var.instance_type
+
+  tags = {
+    Name = "project-sandbox-server"
+  }
+}
